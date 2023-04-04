@@ -8,3 +8,5 @@ description 'Require Steam to Join'
 server_scripts {
     'server.lua'
 }
+
+-- Do not Change anything in this file
