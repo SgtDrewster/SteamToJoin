@@ -8,7 +8,7 @@ Install:
 2. Add the SteamToJoin folder to your Resource folder for your Server.
 3. Rename file to "SteamToJoin" without the "".
 4. Add "ensure SteamToJoin" in server.cfg .
-5. Start Server and enjoy!
+5. Start Server and enjoy! 
 
 
 *Optional*
