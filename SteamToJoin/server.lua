@@ -1,9 +1,19 @@
-AddEventHandler('playerConnecting',function(Name,setKickReason,deferrals)	
-	for _, v in ipairs(GetPlayerIdentifiers(source)) do
-		if string.find(v,"license") then
-			setKickReason("Steam has to be open to join this server!") -- Message that gets displayed when Denied Connection
-			CancelEvent() -- Rejects User When Attempting to Join without Steam (Do Not Touch) 
-			break
-		end
-	end
-end)
+local function OnPlayerConnecting(name, setKickReason, deferrals)
+    local player = source
+    local steamIdentifier
+    local identifiers = GetPlayerIdentifiers(player)
+
+    for _, v in pairs(identifiers) do
+        if string.find(v, "steam") then
+            steamIdentifier = v
+            break
+        end
+    end
+
+    if not steamIdentifier then
+        CancelEvent()
+        setKickReason("You are not connected to Steam.")
+    end
+end
+
+AddEventHandler("playerConnecting", OnPlayerConnecting)
