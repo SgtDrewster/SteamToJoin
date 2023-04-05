@@ -13,4 +13,4 @@ Install:
 
 
 *Optional*
-You can change the message that the player receives when being denied from the server in "server.lua" (See Line 4)
+You can change the message that the player receives when being denied from the server in "server.lua" (See Line 15)
